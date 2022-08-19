@@ -74,7 +74,7 @@ function dykstra(A, b, x0) # dykstra
 
 end
 
-function solve(f, A, b, g, x0, tol = 1.0e-8)
+function solve(f, A, b, g, x0; tol = 1.0e-8, maxit=1000)
 	(m, n) = size(A)
 	alpha = 0.5
 	sig_min = 1.0e-8
@@ -126,7 +126,7 @@ function solve(f, A, b, g, x0, tol = 1.0e-8)
 			end
 		end
 		it += 1
-		if it >= 1000
+		if it >= maxit
 			println("O limite de iterações foi atingido!")
 			break
 		end
