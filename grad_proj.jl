@@ -133,5 +133,5 @@ function solve(f, A, b, g, x0; tol = 1.0e-8, maxit=1000)
 	end
 	println("Solução final: ", x0)
 	println("Número de iterações: ", it)
-	return x0
+	return x0, it
 end

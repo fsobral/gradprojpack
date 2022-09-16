@@ -23,7 +23,7 @@ f(x) = funcao_objetivo(r, pol_1, x)
 xini = dykstra2(A, b, 10 * rand(n))
 
 # Resolve
-xsol = solve(f, A, b, ∇f, xini)
+xsol, nit = solve(f, A, b, ∇f, xini)
 
 # Desenha
 plota_solucao(r, pol_1, 10, 10, xsol)    
