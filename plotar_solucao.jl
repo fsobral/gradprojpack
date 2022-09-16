@@ -97,8 +97,10 @@ function plota_solucao(lista_raios_circ, lista_vertice_pol, L, W, x; salvar_figu
 
         end
 
-    end
+    else
 
-    fig
+        fig
+
+    end
 
 end
