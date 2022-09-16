@@ -67,7 +67,7 @@ Argumentos adicionais:
     - 'salvar_figura': salva a figura no repositório atual como "solucao.png".
 
 """
-function plota_solucao(lista_raios_circ, lista_vertice_pol, L, W, x; salvar_figura = false, np = 0)
+function plota_solucao(lista_raios_circ, lista_vertice_pol, L, W, x; salvar_figura = false, num_problema = 0)
 
     nc = length(lista_raios_circ)
     np = length(lista_vertice_pol)
@@ -87,13 +87,13 @@ function plota_solucao(lista_raios_circ, lista_vertice_pol, L, W, x; salvar_figu
 
     if salvar_figura
 
-        if np == 0
+        if num_problema == 0
 
             savefig(fig, "solucao.png")
 
         else
 
-            savefig(fig, "solucao_$(np).png")
+            savefig(fig, "solucao_$(num_problema).png")
 
         end
 
