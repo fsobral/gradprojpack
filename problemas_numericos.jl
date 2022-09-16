@@ -21,24 +21,55 @@ function testset(i)
 
     if i == 1
 
-        lista_circulos = []
-        lista_poligonos = [[]]
-        L = 0.0
-        W = 0.0
+        lista_circulos = [3.85]
+        lista_poligonos = [
+                            [2.0, 9.0, 1.0, 8.0, 2.0, 7.0, 3.0, 8.0]
+                            ]
+        L = 9.0
+        W = 8.0
 
     elseif i == 2
 
-        lista_circulos = []
-        lista_poligonos = [[]]
-        L = 0.0
-        W = 0.0
+        lista_circulos = [3.85]
+        lista_poligonos = [
+                            [0.0, 0.0, 1.0, 2.0, 4.0, 2.0, 4.0, 0.0], 
+                            [2.0, 9.0, 1.0, 8.0, 2.0, 7.0, 3.0, 8.0]
+                            ]
+        L = 9.0
+        W = 10.0
 
-    else
+    elseif i == 3
 
-        lista_circulos = []
-        lista_poligonos = [[]]
-        L = 0.0
-        W = 0.0
+        lista_circulos = [3.85, 2.0]
+        lista_poligonos = [
+                            [0.0, 0.0, 1.0, 2.0, 4.0, 2.0, 4.0, 0.0], 
+                            [2.0, 9.0, 1.0, 8.0, 2.0, 7.0, 3.0, 8.0]
+                            ]
+        L = 16.0
+        W = 8.0
+
+    elseif i == 4
+
+        lista_circulos = [3.85, 2.0]
+        lista_poligonos = [
+                            [0.0, 0.0, 1.0, 2.0, 4.0, 2.0, 4.0, 0.0], 
+                            [2.0, 9.0, 1.0, 8.0, 2.0, 7.0, 3.0, 8.0], 
+                            [5.0, 2.0, 6.0, 5.0, 7.0, 2.0]
+                            ]
+        L = 10.0
+        W = 10.0
+
+    elseif i == 5
+
+        lista_circulos = [3.85, 2.0]
+        lista_poligonos = [
+                            [0.0, 0.0, 1.0, 2.0, 4.0, 2.0, 4.0, 0.0], 
+                            [2.0, 9.0, 1.0, 8.0, 2.0, 7.0, 3.0, 8.0], 
+                            [5.0, 2.0, 6.0, 5.0, 7.0, 2.0],
+                            [5.0, 9.0, 5.0, 7.0, 7.0, 7.0, 7.0, 9.0]
+                            ]
+        L = 10.0
+        W = 10.0
 
     end
 
@@ -52,7 +83,7 @@ end
 
 function executar_teste(nome_arquivo; salvar_fig = false)
 
-    Random.seed!(123)
+    Random.seed!(0)
     np = 5
     arquivo = open( "testes/" * nome_arquivo * ".tex", "w" )
 
