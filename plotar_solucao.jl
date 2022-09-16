@@ -89,11 +89,11 @@ function plota_solucao(lista_raios_circ, lista_vertice_pol, L, W, x; salvar_figu
 
         if num_problema == 0
 
-            savefig(fig, "solucao.png")
+            savefig(fig, "testes/solucao.png")
 
         else
 
-            savefig(fig, "solucao_$(num_problema).png")
+            savefig(fig, "testes/solucao_$(num_problema).png")
 
         end
 
