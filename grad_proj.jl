@@ -132,5 +132,5 @@ function solve(f, A, b, g, x0; tol = 1.0e-8, maxit=1000)
 		end
 	end
 	println("Solução final: ", x0)
-	return x0
+	return x0, it
 end
